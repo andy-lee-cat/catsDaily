@@ -1,4 +1,5 @@
 // 20c 1900
+// dijkstra
 #include<iostream>
 #include<algorithm>
 #include<vector>
