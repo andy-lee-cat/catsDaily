@@ -30,13 +30,15 @@ void solve() {
     //     cout << n / 2 << " " << n / 2 << '\n';
     //     return;
     // }
-    // n is odd
+    // // n is odd
     for (auto p : primes) {
         if (n % p == 0) {
             cout << n / p << " " << n - n / p << '\n';
-            break;
+            return;
         }
     }
+    // n is prime
+    cout << 1 << " " << n - 1 << '\n';
 }
 
 int main() {
