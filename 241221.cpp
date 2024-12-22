@@ -7,7 +7,7 @@ using namespace std;
 void solve() {
     long long x;
     cin >> x;
-    long long resa = x, resb = x;
+    long long resa = 1, resb = x;
     for (int i = 1; i <= 1e6; i++) {
         if (x % i == 0) {
             long long a = i, b = x / i;
