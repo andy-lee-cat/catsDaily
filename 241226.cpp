@@ -25,6 +25,8 @@ void solve() {
 }
 
 int main() {
+    ios::sync_with_stdio(0); // 不和c的输入输出混用,这行性能影响大,不加直接tle
+    cin.tie(0); // cin和cout不用刷新缓冲区,这行性能影响小,不加运行时间1.5倍左右
     int t = 1;
     cin >> t;
     while (t--) {
