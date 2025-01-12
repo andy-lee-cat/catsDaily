@@ -17,7 +17,7 @@ void solve() {
         cnta[as[i]]++;
         cntb[bs[i]]++;
     }
-    int res = 0;
+    long long res = 0;
     for (int i = 0; i < k; i++) {
         res += k - cnta[as[i]] - cntb[bs[i]] + 1;
     }
