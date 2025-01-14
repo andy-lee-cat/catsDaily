@@ -12,10 +12,7 @@ void solve() {
     for (int i = 1; i < n; i++) {
         if (__gcd(i, n) != 1) continue;
         res.push_back(i);
-        mul = (mul * i) % n;
-        if (__gcd(mul, n) != 1) {
-            cerr << "Error: " << i << ' ' << mul << '\n';
-        }
+        mul = (1ll * mul * i) % n;
     }
     if (mul == 1) {
         cout << res.size() << '\n';
