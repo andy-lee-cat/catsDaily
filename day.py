@@ -13,5 +13,7 @@ elif level == 2:
     elo = random.choice(medium)
 elif level == 3:
     elo = random.choice(hard)
+
+elo += 200
 url += str(elo) + '-' + str(elo)
 print(url)
