@@ -6,7 +6,32 @@ using namespace std;
 
 #define MOD 1000000007
 
+long long power(long long x, long long n) {
+    long long res = 1;
+    while (n) {
+        if (n & 1) res = (res * x) % MOD;
+        x = (x * x) % MOD;
+        n >>= 1;
+    }
+    return res;
+}
+
+vector<long long> fact(1001, 1);
+vector<long long> invfact(1001, 1);
+
 vector<vector<long long>> C(1001, vector<long long>(1001, 0));
+
+void init2() {
+    for (int i = 2; i < 1001; i++) {
+        fact[i] = (fact[i - 1] * i) % MOD;
+        invfact[i] = power(fact[i], MOD - 2);
+    }
+}
+
+long long get_C(long long n, long long k) {
+    if (n < k) return 0;
+    return (fact[n] * invfact[k] % MOD) * invfact[n - k] % MOD;
+}
 
 void init() {
     // C(n, k) = C(n - 1, k - 1) + C(n - 1, k)
@@ -37,12 +62,14 @@ void solve() {
             large++;
     k -= large;
     k = min(k, cnt - k);
-    cout << C[cnt][k] << '\n';
+    // cout << C[cnt][k] << '\n';
+    cout << get_C(cnt, k) << '\n';
 }
 
 int main() {
     int t = 1;
-    init();
+    // init();
+    init2();
     cin >> t;
     while (t--) {
         solve();
