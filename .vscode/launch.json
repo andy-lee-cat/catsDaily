@@ -1,45 +1,18 @@
 {
-  "version": "0.2.0",
-  "configurations": [
-    {
-      "name": "C/C++ Runner: Debug Session",
-      "type": "cppdbg",
-      "request": "launch",
-      "args": ["<", "${fileDirname}\\0IN"],
-      "stopAtEntry": false,
-      "externalConsole": false,
-      "cwd": "${fileDirname}",
-      "program": "${fileDirname}/${fileBasenameNoExtension}.exe",
-      "MIMode": "gdb",
-      "miDebuggerPath": "D:\\patch\\MSYS2\\mingw64\\bin\\gdb.exe",
-      "setupCommands": [
+    "configurations": [
         {
-          "description": "Enable pretty-printing for gdb",
-          "text": "-enable-pretty-printing",
-          "ignoreFailures": true
-        } 
-      ],
-      "preLaunchTask": "C/C++: g++.exe build active file"
-    },
-    {
-      "name": "C/C++ Runner: Debug Session (Std Input)",
-      "type": "cppdbg", 
-      "request": "launch", 
-      "args": [],  // 空数组，表示从标准输入读取
-      "stopAtEntry": false, 
-      "externalConsole": false,
-      "cwd": "${fileDirname}", 
-      "program": "${fileDirname}/${fileBasenameNoExtension}.exe",
-      "MIMode": "gdb", 
-      "miDebuggerPath": "D:\\patch\\MSYS2\\mingw64\\bin\\gdb.exe", 
-      "setupCommands": [
-        {
-          "description": "Enable pretty-printing for gdb",
-          "text": "-enable-pretty-printing",
-          "ignoreFailures": true
-        } 
-      ], 
-      "preLaunchTask": "C/C++: g++.exe build active file"
-    }
-  ]
+            "name": "C/C++: clang++ build and debug active file",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${fileDirname}/${fileBasenameNoExtension}.out",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "externalConsole": true,
+            "MIMode": "lldb",
+            "preLaunchTask": "clang++ build active file"
+        }
+    ],
+    "version": "2.0.0"
 }

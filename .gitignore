@@ -1,2 +1,7 @@
 *.exe
 test.cpp
+*.out
+*.dSYM
+*.o
+*.obj
+./.vscode
