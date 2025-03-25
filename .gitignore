@@ -5,3 +5,4 @@ test.cpp
 *.o
 *.obj
 .vscode/
+.*
