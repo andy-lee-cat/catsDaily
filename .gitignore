@@ -4,4 +4,4 @@ test.cpp
 *.dSYM
 *.o
 *.obj
-./.vscode
+.vscode/
