@@ -1,4 +1,6 @@
 // 1572A 1800
+// 可以用加权图最长路径来做，如果a->b,学了a才能学b
+// a>b, 那么a->b的边权为1，否则为0
 #include<iostream>
 #include<algorithm>
 #include<vector>
