@@ -56,7 +56,8 @@ def main():
             problem_id, difficulty = extract_problem_info(first_line)
 
             if problem_id and difficulty:
-                print(f"Commit: {commit_message} | File: {file} | 题号: {problem_id} | 难度: {difficulty}")
+                # print(f"Commit: {commit_message} | File: {file} | 题号: {problem_id} | 难度: {difficulty}")
+                print(f"{commit_message}, {file}, {problem_id}, {difficulty}")
 
 if __name__ == "__main__":
     main()
