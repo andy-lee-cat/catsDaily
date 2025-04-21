@@ -4,7 +4,6 @@
 #include <vector>
 using namespace std;
 
-
 long long res = 0;
 int n;
 vector<vector<int>> g;
