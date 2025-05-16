@@ -1,3 +1,4 @@
+// 1288C 1600
 #include <iostream>
 #include <algorithm>
 #include <vector>
