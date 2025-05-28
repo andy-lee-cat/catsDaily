@@ -62,7 +62,7 @@ def main():
                 month = file[2:4]
                 day = file[4:6]
                 date = f"{year}/{month}/{day}"
-                print(f"{commit_message[5:]}, {date}, {problem_id}, {difficulty}")
+                print(f"{commit_message[5:]},{date},{problem_id},{difficulty}")
 
 if __name__ == "__main__":
     main()
