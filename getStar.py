@@ -56,8 +56,13 @@ def main():
             problem_id, difficulty = extract_problem_info(first_line)
 
             if problem_id and difficulty:
-                # print(f"Commit: {commit_message} | File: {file} | 题号: {problem_id} | 难度: {difficulty}")
-                print(f"{commit_message}, {file}, {problem_id}, {difficulty}")
+                # commit, date, problem_id, difficulty
+                # file = (str)"250512.cpp" -> date = "25/05/12"
+                year = "20" + file[0:2]
+                month = file[2:4]
+                day = file[4:6]
+                date = f"{year}/{month}/{day}"
+                print(f"{commit_message[5:]},{date},{problem_id},{difficulty}")
 
 if __name__ == "__main__":
     main()
